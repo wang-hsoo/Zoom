@@ -6,14 +6,29 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="https://unpkg.com/mvp.css")
         title Noom
+
     body 
+    header 
         h1 Noom 
         
     main
         div#welcome
-            form
+            h4 Open Romms:
+            ul
+            form#rr
                 input(type="text" placeholder ="room name", required)
-                buttom Enter Room
+                button Enter Room
+
+            form#name
+                input(type="text" placeholder ="nickname", required)
+                button Save
+        
+        div#room
+            h3
+            ul 
+            form#msg
+                input(type="text" placeholder ="message", required)
+                button Send
 
     script(src="/socket.io/socket.io.js")
     script(src="/public/js/app.js")
