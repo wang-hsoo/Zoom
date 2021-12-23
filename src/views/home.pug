@@ -5,30 +5,19 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="https://unpkg.com/mvp.css")
-        title Noom
+        title Zoom
 
     body 
     header 
-        h1 Noom 
+        h1 Zoom
         
     main
-        div#welcome
-            h4 Open Romms:
-            ul
-            form#rr
-                input(type="text" placeholder ="room name", required)
-                button Enter Room
-
-            form#name
-                input(type="text" placeholder ="nickname", required)
-                button Save
-        
-        div#room
-            h3
-            ul 
-            form#msg
-                input(type="text" placeholder ="message", required)
-                button Send
+        div#myStream
+            video#myFace(autoplay, playsline, width = "400", height = "400")
+            button#mute Mute
+            button#camera Turn camera Off
+            select#cameras  
+                
 
     script(src="/socket.io/socket.io.js")
     script(src="/public/js/app.js")
